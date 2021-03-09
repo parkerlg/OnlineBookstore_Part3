@@ -51,7 +51,7 @@ namespace OnlineBookstore.Infrastructure
                 TagBuilder listitem = new TagBuilder("li");
                 listitem.AddCssClass("nav-item");
                 TagBuilder tag = new TagBuilder("a");
-                PageUrlValues["page"] = i;
+                PageUrlValues["pageNum"] = i;
                 tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
                 //tag.AddCssClass("nav-link");
                 if (PageClassesEnabled)

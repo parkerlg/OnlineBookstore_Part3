@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/parkergunnell/Projects/OnlineBookstore_3/OnlineBookstore/OnlineBookstore.csproj": {}
+    "/Users/parkergunnell/Projects/OnlineBookstore_Part3/OnlineBookstore/OnlineBookstore.csproj": {}
   },
   "projects": {
-    "/Users/parkergunnell/Projects/OnlineBookstore_3/OnlineBookstore/OnlineBookstore.csproj": {
+    "/Users/parkergunnell/Projects/OnlineBookstore_Part3/OnlineBookstore/OnlineBookstore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/parkergunnell/Projects/OnlineBookstore_3/OnlineBookstore/OnlineBookstore.csproj",
+        "projectUniqueName": "/Users/parkergunnell/Projects/OnlineBookstore_Part3/OnlineBookstore/OnlineBookstore.csproj",
         "projectName": "OnlineBookstore",
-        "projectPath": "/Users/parkergunnell/Projects/OnlineBookstore_3/OnlineBookstore/OnlineBookstore.csproj",
+        "projectPath": "/Users/parkergunnell/Projects/OnlineBookstore_Part3/OnlineBookstore/OnlineBookstore.csproj",
         "packagesPath": "/Users/parkergunnell/.nuget/packages/",
-        "outputPath": "/Users/parkergunnell/Projects/OnlineBookstore_3/OnlineBookstore/obj/",
+        "outputPath": "/Users/parkergunnell/Projects/OnlineBookstore_Part3/OnlineBookstore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/parkergunnell/.config/NuGet/NuGet.Config"
+          "/Users/parkergunnell/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -38,21 +38,19 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[3.1.12, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[5.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[3.1.12, )"
             }
           },
           "imports": [

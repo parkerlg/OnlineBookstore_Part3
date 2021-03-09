@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using OnlineBookstore.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace OnlineBookstore
 {
@@ -20,7 +21,7 @@ namespace OnlineBookstore
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -29,10 +30,20 @@ namespace OnlineBookstore
 
             services.AddDbContext<BookstoreDBContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:BookstoreConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BookstoreConnection"]);
             });
 
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
+
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+
+            services.AddSession();
+
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +60,10 @@ namespace OnlineBookstore
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
+
+            app.UseSession(); 
 
             app.UseRouting();
 
@@ -58,11 +72,11 @@ namespace OnlineBookstore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("catpage",
-                    "{category}/{page:int}",
+                    "{category}/{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("page",
-                    "{page:int}",
+                    "{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("category",
@@ -71,10 +85,12 @@ namespace OnlineBookstore
 
                 endpoints.MapControllerRoute(
                    "pagination",
-                   "Books/P{page}",
+                   "Books/P{pageNum}",
                    new { Controller = "Home", action = "Index" });
 
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
             });
 
             SeedData.EnsurePopulated(app);
