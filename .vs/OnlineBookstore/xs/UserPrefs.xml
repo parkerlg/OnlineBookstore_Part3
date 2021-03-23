@@ -1,28 +1,41 @@
-﻿<Properties StartupConfiguration="{117EC244-88E3-41EE-B6B0-005F3A012287}|Default">
-  <MonoDevelop.Ide.ItemProperties.OnlineBookstore PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OnlineBookstore/Views/Shared/BookSummary.cshtml">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{117EC244-88E3-41EE-B6B0-005F3A012287}|Default">
+  <MonoDevelop.Ide.ItemProperties.OnlineBookstore PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="OnlineBookstore/Pages/Purchase.cshtml" Line="41" Column="14" IsPinned="True" />
-      <File FileName="OnlineBookstore/Views/Shared/Components/NavigationMenu/Default.cshtml" Line="1" Column="3" IsPinned="True" />
-      <File FileName="OnlineBookstore/Models/Cart.cs" Line="32" Column="1" />
-      <File FileName="OnlineBookstore/Pages/Purchase.cshtml.cs" Line="53" Column="10" />
-      <File FileName="OnlineBookstore/Pages/Shared/_CartLayout.cshtml" Line="1" Column="1" />
-      <File FileName="OnlineBookstore/Models/EmptyClass.cs" Line="31" Column="43" />
-      <File FileName="OnlineBookstore/Startup.cs" Line="38" Column="36" />
-      <File FileName="OnlineBookstore/Infrastructure/SessionExtensions.cs" Line="19" Column="1" />
-      <File FileName="OnlineBookstore/Components/CartSummaryViewComponent.cs" Line="11" Column="10" />
-      <File FileName="OnlineBookstore/Views/Shared/Components/CartSummary/Default.cshtml" Line="17" Column="68" />
-      <File FileName="OnlineBookstore/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="OnlineBookstore/Views/Shared/_Layout.cshtml" Line="12" Column="1" />
-      <File FileName="OnlineBookstore/Components/NavigationMenuViewComponent.cs" Line="1" Column="1" />
-      <File FileName="OnlineBookstore/Infrastructure/UrlExtension.cs" Line="1" Column="1" />
-      <File FileName="OnlineBookstore/Views/Shared/BookSummary.cshtml" Line="1" Column="1" />
+      <File FileName="OnlineBookstore/Views/Shared/Components/NavigationMenu/Default.cshtml" IsPinned="True" />
+      <File FileName="OnlineBookstore/Models/Cart.cs" />
+      <File FileName="OnlineBookstore/Pages/Purchase.cshtml.cs" />
+      <File FileName="OnlineBookstore/Pages/Shared/_CartLayout.cshtml" />
+      <File FileName="OnlineBookstore/Startup.cs" Line="33" Column="68" />
+      <File FileName="OnlineBookstore/Infrastructure/SessionExtensions.cs" />
+      <File FileName="OnlineBookstore/Components/CartSummaryViewComponent.cs" />
+      <File FileName="OnlineBookstore/Views/Shared/Components/CartSummary/Default.cshtml" />
+      <File FileName="OnlineBookstore/Views/Home/Index.cshtml" />
+      <File FileName="OnlineBookstore/Views/Shared/_Layout.cshtml" />
+      <File FileName="OnlineBookstore/Components/NavigationMenuViewComponent.cs" />
+      <File FileName="OnlineBookstore/Infrastructure/UrlExtension.cs" />
+      <File FileName="OnlineBookstore/Views/Shared/BookSummary.cshtml" />
+      <File FileName="OnlineBookstore/Pages/_ViewImports.cshtml" />
+      <File FileName="OnlineBookstore/Models/BookstoreDBContext.cs" Line="22" Column="23" />
+      <File FileName="OnlineBookstore/Models/Book.cs" />
+      <File FileName="OnlineBookstore/Models/EFBookstoreRepository.cs" Line="8" Column="35" />
+      <File FileName="OnlineBookstore/Models/IBookstoreRepository.cs" Line="1" Column="1" />
+      <File FileName="OnlineBookstore/Controllers/HomeController.cs" Line="24" Column="37" />
+      <File FileName="OnlineBookstore/appsettings.json" />
+      <File FileName="OnlineBookstore/Models/SessionCart.cs" />
+      <File FileName="OnlineBookstore/Models/ErrorViewModel.cs" />
+      <File FileName="OnlineBookstore/Models/ViewModels/BookListViewModel.cs" />
+      <File FileName="OnlineBookstore/Models/SeedData.cs" Line="17" Column="38" />
+      <File FileName="OnlineBookstore/Program.cs" Line="16" Column="1" />
+      <File FileName="OnlineBookstore/Models/Helpers.cs" Line="36" Column="79" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineBookstore" expanded="True">
             <Node name="OnlineBookstore" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Components" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Infrastructure" expanded="True" />
@@ -32,14 +45,10 @@
                 <Node name="Purchase.cshtml" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="Components" expanded="True">
-                    <Node name="CartSummary" expanded="True" />
-                    <Node name="NavigationMenu" expanded="True" />
-                  </Node>
-                  <Node name="BookSummary.cshtml" selected="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Privacy.cshtml" selected="True" />
                 </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>

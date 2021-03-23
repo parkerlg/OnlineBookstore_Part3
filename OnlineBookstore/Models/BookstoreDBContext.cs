@@ -9,7 +9,16 @@ namespace OnlineBookstore.Models
         {
 
         }
+		public BookstoreDBContext() //Add this change
+		{
 
-        public DbSet<Book> Books { get; set; }
+		}
+
+		public static BookstoreDBContext Create() //Add this change
+		{
+			return new BookstoreDBContext();
+		}
+
+		public DbSet<Book> Books { get; set; }
     }
 }

@@ -30,7 +30,7 @@ namespace OnlineBookstore
 
             services.AddDbContext<BookstoreDBContext>(options =>
             {
-                options.UseSqlite(Configuration["ConnectionStrings:BookstoreConnection"]);
+                options.UseSqlServer(Helpers.GetRDSConnectionString());
             });
 
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
